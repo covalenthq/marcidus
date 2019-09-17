@@ -1,4 +1,4 @@
-module github.com/covalenthq/casseq
+module github.com/covalenthq/marcidus
 
 go 1.13
 

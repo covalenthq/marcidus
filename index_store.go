@@ -1,4 +1,4 @@
-package casseq
+package marcidus
 
 import (
   "errors"

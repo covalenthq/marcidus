@@ -1,4 +1,4 @@
-package casseq
+package marcidus
 
 import (
   "encoding/json"
@@ -72,7 +72,7 @@ func Open(dataDir string, seqName string, newConfig configT) (*Store, error) {
   }
 
   if _, ok := config["stride"]; !ok {
-    return nil, errors.New("a nonzero config[\"stride\"] is required for new casseq.Store")
+    return nil, errors.New("a nonzero config[\"stride\"] is required for new marcidus.Store")
   }
 
   rowStore, err := newRowStore(filepath.Join(storeDir, "rows"), config["stride"].(int64))
@@ -91,7 +91,7 @@ func Open(dataDir string, seqName string, newConfig configT) (*Store, error) {
     storeLock:  storeLock,
   }
 
-  fmt.Printf("Opened casseq.Store: %s\n", storeDir)
+  fmt.Printf("Opened marcidus.Store: %s\n", storeDir)
   return seq, nil
 }
 

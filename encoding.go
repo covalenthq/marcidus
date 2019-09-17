@@ -1,4 +1,4 @@
-package casseq
+package marcidus
 
 func encodeEntryId(entryId uint64) []byte {
   var blob []byte
